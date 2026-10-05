@@ -14,6 +14,12 @@ Static website for **Velqora**, web design & development (Ireland). Plain HTML, 
 | `accessibility.html` | Accessibility Statement |
 | `404.html` | Not-found page |
 
+## Client sites
+
+| Folder | Client |
+|--------|--------|
+| `caked-by-abbie/` | Caked by Abbie, custom cakes in Lucan. Self-contained; see its own README |
+
 ## Preview locally
 
 ```bash
