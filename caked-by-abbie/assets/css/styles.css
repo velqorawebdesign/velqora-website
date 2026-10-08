@@ -296,31 +296,31 @@ section[id], [id="allergens"] { scroll-margin-top: 84px; }
 }
 
 /* ---------- Hero cake: tiers stack up once when the cake comes into view ----------
-   Plays once in about 3 seconds (under WCAG's 5-second limit, so no pause button is needed).
+   Plays once in about 4.8 seconds (under WCAG's 5-second limit, so no pause button is needed).
    Skipped for reduced motion and without JavaScript: those visitors see the finished cake. */
 @media (prefers-reduced-motion: no-preference) and (scripting: enabled) {
   .cake-art .ca-part { transform-box: fill-box; transform-origin: 50% 100%; animation-fill-mode: both; animation-play-state: paused; }
   .cake-art.is-playing .ca-part { animation-play-state: running; }
 
-  .ca-bg      { animation: ca-fade .5s ease-out 0s; }
-  .ca-stand   { animation: ca-rise .5s cubic-bezier(.2,.8,.3,1.2) .1s; }
-  .ca-tier1   { animation: ca-drop .6s cubic-bezier(.3,1.5,.5,1) .45s; }
-  .ca-tier2   { animation: ca-drop .6s cubic-bezier(.3,1.5,.5,1) 1s; }
-  .ca-pipe    { transform-origin: 50% 50%; animation: ca-pop .35s cubic-bezier(.3,1.6,.5,1); }
-  .ca-pipe1   { animation-delay: 1.55s; }
-  .ca-pipe2   { animation-delay: 1.7s; }
-  .ca-pipe3   { animation-delay: 1.85s; }
-  .ca-bow     { transform-origin: 50% 20%; animation: ca-pop .35s cubic-bezier(.3,1.8,.5,1); }
-  .ca-bow1, .ca-bow4 { animation-delay: 2.05s; }
-  .ca-bow2    { animation-delay: 2.15s; }
-  .ca-bow3, .ca-bow5 { animation-delay: 2.25s; }
-  .ca-cherry  { animation: ca-cherry .5s cubic-bezier(.3,1.6,.5,1); }
-  .ca-cherry1 { animation-delay: 2.4s; }
-  .ca-cherry2 { animation-delay: 2.55s; }
-  .ca-cherry3 { animation-delay: 2.7s; }
-  .ca-ribbon, .ca-heart { transform-origin: 50% 50%; animation: ca-pop .5s ease-out 2.75s; }
-  .ca-heart2  { animation-delay: 2.85s; }
-  .ca-heart3  { animation-delay: 2.95s; }
+  .ca-bg      { animation: ca-fade 0.7s ease-out 0s; }
+  .ca-stand   { animation: ca-rise 0.7s cubic-bezier(.2,.8,.3,1.2) 0.14s; }
+  .ca-tier1   { animation: ca-drop 0.84s cubic-bezier(.3,1.5,.5,1) 0.63s; }
+  .ca-tier2   { animation: ca-drop 0.84s cubic-bezier(.3,1.5,.5,1) 1.4s; }
+  .ca-pipe    { transform-origin: 50% 50%; animation: ca-pop 0.49s cubic-bezier(.3,1.6,.5,1); }
+  .ca-pipe1   { animation-delay: 2.17s; }
+  .ca-pipe2   { animation-delay: 2.38s; }
+  .ca-pipe3   { animation-delay: 2.59s; }
+  .ca-bow     { transform-origin: 50% 20%; animation: ca-pop 0.49s cubic-bezier(.3,1.8,.5,1); }
+  .ca-bow1, .ca-bow4 { animation-delay: 2.87s; }
+  .ca-bow2    { animation-delay: 3.01s; }
+  .ca-bow3, .ca-bow5 { animation-delay: 3.15s; }
+  .ca-cherry  { animation: ca-cherry 0.7s cubic-bezier(.3,1.6,.5,1); }
+  .ca-cherry1 { animation-delay: 3.36s; }
+  .ca-cherry2 { animation-delay: 3.57s; }
+  .ca-cherry3 { animation-delay: 3.78s; }
+  .ca-ribbon, .ca-heart { transform-origin: 50% 50%; animation: ca-pop 0.7s ease-out 3.85s; }
+  .ca-heart2  { animation-delay: 3.99s; }
+  .ca-heart3  { animation-delay: 4.13s; }
 
   @keyframes ca-fade   { from { opacity: 0; } }
   @keyframes ca-rise   { from { opacity: 0; transform: translateY(24px) scaleX(.6); } }
