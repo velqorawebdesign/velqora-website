@@ -52,6 +52,23 @@
     reveals.forEach(function (el) { io.observe(el); });
   }
 
+  // ---------- Hero cake animation ----------
+  // CSS holds the cake pieces still until it's on screen, then it builds once.
+  var cake = document.querySelector(".cake-art");
+  if (cake) {
+    if (!("IntersectionObserver" in window)) {
+      cake.classList.add("is-playing");
+    } else {
+      var cakeIo = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) {
+          cake.classList.add("is-playing");
+          cakeIo.disconnect();
+        }
+      }, { threshold: 0.35 });
+      cakeIo.observe(cake);
+    }
+  }
+
   // ---------- Order planner ----------
   // Validates accessibly, then writes an order message the visitor copies into Instagram.
   // Nothing is sent to or stored by this website.
